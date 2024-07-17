@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student-Teacher Booking Appointment</h1>
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+
+            <label for="teacher">Teacher:</label>
+            <select id="teacher" required>
+                <option value="">Select a Teacher</option>
+                <option value="Teacher 1">ANUM KAMAL</option>
+                <option value="Teacher 2">MOHD USMAN KHAN</option>
+                <option value="Teacher 3">SHEEBA PARVEEN</option>
+            </select>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+        <div id="confirmation"></div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
