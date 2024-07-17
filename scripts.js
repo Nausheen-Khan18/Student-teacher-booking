@@ -1,4 +1,4 @@
-// Firebase configuration
+
 const firebaseConfig = {
     apiKey: "YOUR_API_KEY",
     authDomain: "YOUR_AUTH_DOMAIN",
@@ -8,7 +8,7 @@ const firebaseConfig = {
     appId: "YOUR_APP_ID"
 };
 
-// Initialize Firebase
+
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
@@ -17,22 +17,22 @@ document.getElementById('booking-form').addEventListener('submit', submitForm);
 function submitForm(e) {
     e.preventDefault();
 
-    // Get values
+    
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const date = document.getElementById('date').value;
     const time = document.getElementById('time').value;
     const teacher = document.getElementById('teacher').value;
 
-    // Save appointment
+    
     saveAppointment(name, email, date, time, teacher);
 
-    // Show confirmation
+    
     document.getElementById('confirmation').innerText = "Appointment booked successfully!";
     document.getElementById('booking-form').reset();
 }
 
-// Save appointment to Firestore
+
 function saveAppointment(name, email, date, time, teacher) {
     db.collection('appointments').add({
         name: name,
